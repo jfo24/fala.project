@@ -1,0 +1,235 @@
+# 🩵 **UX/UI Requirements — Fala App**
+
+## 🎯 **1. Core UX Goals**
+
+* Criar uma **experiência emocionalmente leve e segura**, que transmita **calma, empatia e aconchego**.
+* Interface deve **reduzir fricção emocional** (zero sobrecarga cognitiva, tipografia arredondada e espaçamento respirável).
+* Garantir **acessibilidade emocional e visual**: legibilidade alta, microinterações suaves, ausência de ruído visual.
+
+---
+
+## 💠 **2. Design System & Visual Tone**
+
+| Elemento               | Requisitos                                                                                                                                                                                     |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 🎨 **Paleta de Cores** | - Azul-claro `#B6E0F2` (tranquilidade)<br>- Bege `#FAF3E0` (acolhimento)<br>- Rosa-pálido `#F8DADF` (empatia)<br>- Branco-neve `#FFFFFF` (pureza)<br>- Cinza suave `#E8E8E8` (neutro calmante) |
+| 🖋️ **Tipografia**     | - **Primária:** *Nunito* ou *Poppins* (bordas arredondadas, amigável)<br>- **Tamanho base:** 16–18px<br>- **Line height:** 1.6 para sensação de ar e leveza                                    |
+| 🧸 **Estilo Geral**    | - Cantos **muito arredondados** (`border-radius: 24px`) <br>- **Sombras suaves** e difusas (`rgba(0,0,0,0.05)`) <br>- Espaçamento generoso (`padding: 16–24px`)                                |
+| 💫 **Microinterações** | - Transições suaves de 300–500ms (ease-in-out)<br>- Feedback tátil leve em botões principais<br>- Animações “de respiração” (como expandir/retrair suavemente)                                 |
+
+---
+
+## 💬 **3. Estrutura de Navegação**
+
+```
+[ Home ]
+ ├── Falar
+ │    ├── Escolher Tópico
+ │    ├── Escolher Tempo
+ │    ├── Matching
+ │    └── Chat (com Mira AI ou Listener)
+ ├── Ouvir
+ │    ├── Escolher Tempo
+ │    ├── Escolher Tópicos
+ │    ├── Matching
+ │    └── Chat
+ └── Perfil
+      ├── Badges & Níveis
+      ├── Estatísticas de Empatia
+      └── Configurações
+```
+
+---
+
+## 🕊️ **4. Home Screen**
+
+**Objetivo:** Introduzir um ambiente seguro e aconchegante logo no início.
+
+**Layout:**
+
+* Fundo **bege-claro** ou **branco-neve** com gradiente suave azul → rosa.
+* Frase acolhedora central:
+
+  > “💬 Fala o que sentes. Há sempre alguém para te ouvir.”
+* Dois botões grandes:
+
+  * 🗣️ “Quero Falar” (cor: azul-claro)
+  * 👂 “Quero Ouvir” (cor: rosa-pálido)
+* Cada botão com **animação hover** tipo *pulse slow*.
+* Texto de apoio pequeno e calmo:
+
+  > “Não é terapia. É empatia.”
+
+---
+
+## 🗣️ **5. Modo Talk Flow**
+
+**Objetivo:** Fazer o user sentir-se ouvido e guiado, passo a passo.
+
+**Screens & UX:**
+
+1. **Escolher Tópico**
+
+   * Cards arredondados com ícones suaves (💔, 💼, 👨‍👩‍👧, 🌧️…)
+   * Fundo muda subtilmente conforme o tópico (ex: azul para ansiedade, rosa para relações)
+   * CTA: “Próximo” (sempre fixo no fundo com *floating gradient button*)
+
+2. **Escolher Tempo**
+
+   * Botões tipo “pill” com emoji: `5 min 🕔`, `10 min ⏳`, `20 min 🕰️`
+   * Animação de click → botão cresce ligeiramente e brilha
+   * Subtexto suave:
+
+     > “Escolhe o tempo que precisas para falares sem pressa.”
+
+3. **Matching Screen**
+
+   * Fundo animado com pequenas partículas luminosas lentas ✨
+   * Texto dinâmico:
+
+     > “A procurar alguém que queira ouvir-te com calma...”
+   * Loader circular tipo *soft breathing animation*
+
+4. **Chat Screen**
+
+   * Layout minimalista tipo iMessage, mas com **tons quentes e bolhas suaves**
+   * Avatar circular anónimo + cor pastel por utilizador
+   * Placeholder inicial:
+
+     > “Podes começar quando quiseres 🌷”
+   * No final da sessão:
+
+     > “O teu tempo terminou. Respira. Falaste o que precisavas.”
+   * Fade-out suave e card de feedback (emoji rating: 😔😐😊💖)
+
+---
+
+## 👂 **6. Modo Listen Flow**
+
+**Objetivo:** Reforçar propósito e recompensa emocional.
+
+**Screens & UX:**
+
+1. **Escolher Tempo & Tópicos**
+
+   * Interface semelhante ao modo Talk, mas com ênfase em *“oferecer tempo”*
+   * Frase motivacional:
+
+     > “Há alguém que precisa da tua calma hoje 🌱”
+   * Toggle de disponibilidade:
+
+     > “Disponível por 15 / 30 / 60 min”
+
+2. **Matching Prompt**
+
+   * Card tipo notificação:
+
+     > “Alguém precisa de falar sobre solidão. Queres ouvir?”
+   * Botões: `Aceitar 💞` ou `Agora não`
+
+3. **Chat**
+
+   * Identidade anónima: apenas cor + avatar simbólico
+   * Efeito de “calma” quando mensagens são recebidas (bolhas aparecem suavemente)
+   * Ao terminar:
+
+     > “A conversa terminou. Obrigado por esta escuta.”
+   * Feedback popup com emoji rating e opção “Quero continuar a ouvir”.
+
+---
+
+## 🤖 **7. Mira AI Flow**
+
+**Objetivo:** Manter o mesmo conforto emocional que um humano traria.
+
+* UI igual ao chat humano, mas com **avatar azul-brilhante animado** (leve brilho pulsante).
+* Frases iniciais aleatórias, tipo:
+
+  > “🌸 Estou aqui contigo. O que te está a pesar hoje?”
+* Tempo de resposta natural (delay 1.5–2s).
+* Fundo com ligeiro *glow particle animation* quando Mira responde.
+
+---
+
+## 💞 **8. Sistema de Badges (Cozy Spirits)**
+
+| Nível | Nome     | Cor de Aura   | Microanimação               |
+| :---: | :------- | :------------ | :-------------------------- |
+|   1   | Pebbie   | Cinza suave   | Penas a cair lentamente     |
+|   2   | Glowie   | Dourado suave | Luz que expande em pulsos   |
+|   3   | Heartie  | Rosa quente   | Coração a brilhar 3 vezes   |
+|   4   | Lumi     | Azul-noite    | Lua a aparecer com estrelas |
+|   5   | Seraphie | Dourado-claro | Pomba de luz abre as asas   |
+
+* Mostrados no **perfil do listener** com animação leve ao desbloquear.
+* Bar de progresso tipo *aurora light fill* (em vez de barra rígida).
+
+---
+
+## 🌸 **9. Feedback e Microcopy**
+
+**Tom de voz:** Calmo, humano, empático.
+**Regras:**
+
+* Nunca usar “você” ou tom autoritário.
+* Evitar imperativos; preferir convites.
+* Exemplo:
+  ❌ “Escreve o que sentes.” → ✅ “Se quiseres, podes contar-me o que te dói.”
+
+---
+
+## 📱 **10. Motion & Interaction Guidelines**
+
+* Transições entre ecrãs devem ser **crossfade suaves**, nunca instantâneas.
+* Evitar sons invasivos — apenas tons leves de sino, respiração, ou vento.
+* Toque háptico leve em ações principais (entrar em chat, enviar mensagem).
+* Animações máximas de 500ms (ease-in-out ou cubic-bezier suave).
+
+---
+
+## 🌿 **11. Empty & Loading States**
+
+* Usar **mensagens tranquilizadoras** em vez de loaders técnicos:
+
+  * “🌱 A preparar um espaço seguro para ti...”
+  * “✨ A encontrar alguém que queira ouvir com o coração...”
+* Loader visual tipo respiração (círculo que expande e contrai lentamente).
+
+---
+
+## 🌈 **12. Acessibilidade & Inclusão**
+
+* Contraste mínimo AA para texto (especialmente azul sobre bege).
+* Tamanho de toque mínimo 44x44px.
+* Modo “Alto Conforto Visual” (sem animações rápidas, cores ainda mais suaves).
+* Texto legível em dislexia-friendly fonts (opcional toggle).
+
+---
+
+## 🔔 **13. Notificações Push**
+
+* Texto empático, não urgente:
+
+  > “🌸 Alguém precisa da tua calma. Queres ouvir?”
+  > “🫶 Há um novo ouvinte disponível. Queres falar agora?”
+
+---
+
+## 🧭 **14. Perfil do Utilizador**
+
+**Seções:**
+
+* 💫 Avatar pastel anónimo (formas suaves, não realistas)
+* 🩵 Badges desbloqueados (com microanimação)
+* 📊 Estatísticas: “Horas de escuta”, “Pessoas confortadas”, “Rating médio”
+* 🧘 Mensagem pessoal opcional:
+
+  > “O que me guia: espalhar calma 🌷”
+
+---
+
+## 🌙 **15. Emoção Central**
+
+> Cada toque deve transmitir **calma, calor e segurança.**
+>
+> O objetivo não é “gamar” — é **fazer o utilizador sentir-se humano, presente e aceito.**

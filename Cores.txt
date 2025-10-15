@@ -1,0 +1,5 @@
+["#cdb4db","#ffc8dd","#ffafcc","#bde0fe","#a2d2ff"] pastel dreamland adventure
+
+["#d8e2dc","#ffffff","#ffcad4","#f4acb7","#9d8189"] soft earth tones
+
+Font Type -> Lexend Deca

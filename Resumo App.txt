@@ -1,0 +1,140 @@
+# 💬 **Fala — “Fala o que sentes. Há sempre alguém para te ouvir.”**
+
+> ✳️ “Fala. Eu ouço. Sem julgamento.”
+> ✳️ “Não é terapia. É empatia.”
+
+---
+
+## ❤️ 1. Conceito Central
+
+**Fala** é uma app móvel de desabafos anónimos em **chat de texto**, onde utilizadores escolhem estar em **modo Talk** (para falar) ou **modo Listen** (para ouvir).
+
+Quando não há ouvintes disponíveis, entra em cena a **Mira AI**, a ouvinte digital empática do Fala.
+
+---
+
+## 🧠 2. Modos de Utilização
+
+### 🗣️ **Modo Talk — Para quem quer desabafar**
+
+1. O utilizador entra e escolhe **“Quero Falar”**.
+2. Seleciona um **tópico emocional**:
+
+   * Ansiedade
+   * Relacionamentos
+   * Trabalho
+   * Família
+   * Solidão
+   * Outro
+3. Define o **tempo que precisa para falar**:
+
+   * 5 min 🕔
+   * 10 min ⏳
+   * 20 min 🕰️
+4. Toca em **“Falar Agora”**.
+5. O sistema faz **matching com um ouvinte disponível**.
+6. Se não houver ouvintes → o utilizador pode escolher falar com com **Mira AI**.
+7. Após o tempo escolhido, o chat termina com uma mensagem calma:
+
+   > “O teu tempo terminou. Respira. Falaste o que precisavas.”
+
+---
+
+### 👂 **Modo Listen — Para quem quer ouvir**
+
+1. O utilizador escolhe **“Quero Ouvir”**.
+2. Define a sua **disponibilidade de tempo** (ex: 15, 30 ou 60 min).
+3. Pode escolher **tópicos preferidos** que gosta de ouvir (ex: relações, motivação, saúde mental).
+4. Quando alguém no modo *Talk* inicia um desabafo, a app procura um *Listener* compatível:
+
+   > “Alguém precisa de falar sobre ansiedade. Duração: 10 min. Queres ouvir?”
+5. Ao aceitar, o chat começa anonimamente.
+6. Quando o tempo termina, ambos recebem a mensagem:
+
+   > “A conversa terminou. Obrigado por esta escuta.”
+
+---
+
+### 🤖 **Mira AI — Quando não há ouvintes humanos disponíveis**
+
+Se o sistema não encontrar ouvintes humanos:
+
+* O user pode escolher Mira AI para iniciar a conversa.
+* Fala num tom empático e humano.
+* Responde com frases acolhedoras, nunca julgando ou dando conselhos invasivos.
+
+🩵 Exemplo de diálogo:
+**Utilizador:** “Sinto-me cansado de tudo.”
+**Mira AI:** “Deve estar a ser pesado carregar isso. Queres contar-me o que te tem deixado assim?”
+
+---
+
+## ⚙️ 3. Stack Técnica (para MVP Mobile)
+
+| Tecnologia                     | Função                                                   |
+| ------------------------------ | -------------------------------------------------------- |
+| **React Native (Expo)**        | App Android/iOS                                          |
+| **Firebase Auth**              | Login anónimo / perfis básicos                           |
+| **Firestore**                  | Armazenar mensagens e estado do modo (Talk/Listen)       |
+| **Firebase Functions**         | Matching automático                                      |
+| **GPT API (Mira AI)**          | Chat empático quando não há ouvintes humanos             |
+| **Firebase Cloud Messaging**   | Notificações push                                        |
+| **Cloud Scheduler (opcional)** | Gerir tempo de sessão (ex: encerrar chat após X minutos) |
+
+---
+
+## 💰 4. Monetização
+
+| Modelo                  | Descrição                                                                     |
+| ----------------------- | ----------------------------------------------------------------------------- |
+| **Gratuito + Créditos** | 3 Falas gratuitos/mês com ouvintes reais                                  |
+| **Subscrição Premium**  | €4,99/mês → desabafos ilimitados + Mira AI ilimitada + prioridade no matching |
+| **Futuro:**             | Recompensas e estatísticas de empatia para ouvintes dedicados                 |
+
+---
+
+## 🧭 5. Fluxo de Utilizador (Simplificado)
+
+### 🔹 Talk Mode
+
+```
+Início → Escolher “Falar” → Escolher Tópico → Escolher Tempo → Matching → Chat → Encerramento
+```
+
+### 🔹 Listen Mode
+
+```
+Início → Escolher “Ouvir” → Escolher Tópicos → Definir Tempo → Matching → Chat → Encerramento
+```
+
+---
+
+## 🎨 6. Identidade Visual
+
+| Elemento        | Descrição                                                  |
+| --------------- | ---------------------------------------------------------- |
+| **Nome:**       | **Fala**                                                   |
+| **Cores:**      | Azul-claro 🩵 (tranquilidade) + bege (acolhimento)         |
+| **Tipografia:** | *Nunito / Poppins* — redonda, moderna e calma              |
+| **Ícone:**      | Balão de fala 💬 com um brilho subtil (símbolo da Mira AI) |
+| **Tom de voz:** | Humano, gentil e empático (“Estamos aqui para te ouvir.”)  |
+
+---
+
+## 🚀 7. Roadmap MVP (30 dias)
+
+| Semana | Objetivo                                                |
+| ------ | ------------------------------------------------------- |
+| **1**  | Setup do projeto React Native + Auth + UI básica        |
+| **2**  | Implementar modos (Talk / Listen) e sistema de matching |
+| **3**  | Integrar Mira AI e controlo de tempo      |
+| **4**  | Testes internos + Beta + recolha de feedback            |
+
+---
+
+## 🌱 8. Por que este modelo é poderoso
+
+✅ Dá controlo emocional e de tempo ao utilizador
+✅ Mantém o foco humano com fallback inteligente (Mira AI)
+✅ Facilmente escalável (mais ouvintes = melhor matching)
+✅ UX simples, mobile-first e emocionalmente leve
